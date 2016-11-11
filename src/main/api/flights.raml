@@ -1,0 +1,79 @@
+#%RAML 0.8
+title: Flights API
+version: v1
+
+/flights:
+  get:
+    queryParameters:
+      full:
+        type: boolean
+        required: false
+        default: false
+        description: This specifies if the list should include price and seats
+      start:
+        type: integer
+        default: 0
+        description: Start of result pagination
+      max:
+        type: integer
+        default: 50
+        description: Maximum pagination results
+      destination:
+        type: string
+        required: true
+        description: Destination airport code
+    responses:
+      200:
+        body:
+          application/json:
+            schema: |
+              {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "planeType": {
+                      "type": "string"
+                    },
+                    "code2": {
+                      "type": "string"
+                    },
+                    "toAirport": {
+                      "type": "string"
+                    },
+                    "takeOffDate": {
+                      "type": "string"
+                    },
+                    "fromAirport": {
+                      "type": "string"
+                    },
+                    "price": {
+                      "type": "integer"
+                    },
+                    "airlineName": {
+                      "type": "string"
+                    },
+                    "seatsAvailable": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "code1": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "planeType",
+                    "code2",
+                    "toAirport",
+                    "takeOffDate",
+                    "fromAirport",
+                    "airlineName",
+                    "id",
+                    "code1"
+                  ]
+                }
+              }
+        

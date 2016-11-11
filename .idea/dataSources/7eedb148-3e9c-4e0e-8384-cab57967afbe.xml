@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - test@test.cis8ww2ojotg.us-east-1.rds.amazonaws.com">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="test">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="information_schema"/>
+    <schema id="3" name="innodb"/>
+    <schema id="4" name="mysql"/>
+    <schema id="5" name="performance_schema"/>
+    <schema id="6" name="sys"/>
+    <table id="7" parent="1" name="flights"/>
+    <column id="8" parent="7" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="9" parent="7" name="code1">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="10" parent="7" name="code2">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="11" parent="7" name="airlineName">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="12" parent="7" name="toAirport">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="13" parent="7" name="fromAirport">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="14" parent="7" name="takeOffDate">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="15" parent="7" name="price">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="16" parent="7" name="planeType">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="17" parent="7" name="seatsAvailable">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="18" parent="7" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
